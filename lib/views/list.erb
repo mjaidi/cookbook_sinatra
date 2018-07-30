@@ -1,0 +1,7 @@
+<h1>My Recipes</h1>
+
+<ol>
+<% @cookbook.each_with_index do |recipe, index| %>
+       <li>  <a href="listed/<%= index + 1 %>"> <%="#{recipe.name.capitalize}" %></a> </li> <br>
+    <% end %>
+</ol>

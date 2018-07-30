@@ -1,0 +1,12 @@
+<h1>Delete a Recipe</h1>
+
+<ol>
+<% @cookbook.each do |recipe| %>
+       <li> <%=" #{recipe.name}" %> </li> 
+    <% end %>
+</ol>
+
+<form action="/remove" method="post">
+  Choose Number of recipe to Delete <input type="number" name="index"> <br>
+  <input type="submit" value="Delete">
+</form>

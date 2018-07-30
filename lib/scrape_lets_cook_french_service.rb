@@ -4,9 +4,9 @@ require 'nokogiri'
 class ScrapeLetsCookFrenchService
   def initialize(keyword)
     @keyword = keyword
-    # html_content = open("http://www.letscookfrench.com/recipes/find-recipe.aspx?aqt=#{keyword}").read
-    file = File.open("../html_files/strawberry.html")
-    @doc = Nokogiri::HTML(file, nil, 'utf-8')
+    html_content = open("http://www.letscookfrench.com/recipes/find-recipe.aspx?aqt=#{keyword}").read
+    # file = File.open("../html_files/strawberry.html")
+    @doc = Nokogiri::HTML(html_content, nil, 'utf-8')
     @recipes = []
   end
 

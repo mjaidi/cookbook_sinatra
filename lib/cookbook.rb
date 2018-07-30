@@ -1,5 +1,6 @@
 # Repository - replaces database and stores recipes in csv file
 require_relative 'recipe'
+require 'csv'
 class Cookbook
   def initialize(csv_file_path)
     # loads existing recipes from CSV file

@@ -1,0 +1,25 @@
+<h1>Import a Recipe from LetsCookFrench</h1>
+
+<form action="/search" method="post">
+   <div class="md-form">
+    <label for="form1" >Search Keyword</label>
+    <input type="text" id="form1" class="form-control" name="keyword">
+  </div> <br>
+  <input type="submit" value="Search">
+</form>
+
+<% if @recipie_names != [] %>
+<ol>
+<% @@recipe_names.each do |recipe| %>
+       <li> <%=" #{recipe[:name]}" %> </li> 
+    <% end %>
+</ol>
+<form action="/import" method="post">
+   <div class="md-form">
+    <label for="form1" >Choose index of recipe to add</label>
+    <input type="number" id="form1" class="form-control" name="index">
+  </div> <br>
+  <input type="submit" value="Add Recipe">
+</form>
+
+<% end %>
